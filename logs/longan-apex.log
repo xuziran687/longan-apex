@@ -1,0 +1,442 @@
+2026-06-13 21:19:04.695 [main] INFO  com.longan.LonganApexApplication - Starting LonganApexApplication using Java 21.0.2 with PID 7760 (/mnt/data/Projects/test/longan-apex/longan_apex/target/classes started by fedora in /mnt/data/Projects/test/longan-apex)
+2026-06-13 21:19:04.696 [main] DEBUG com.longan.LonganApexApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-06-13 21:19:04.697 [main] INFO  com.longan.LonganApexApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-13 21:19:05.558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-13 21:19:05.559 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-13 21:19:05.559 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-06-13 21:19:05.589 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-13 21:19:06.452 [main] INFO  com.longan.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-06-13 21:19:06.703 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-13 21:19:06.717 [main] INFO  com.longan.LonganApexApplication - Started LonganApexApplication in 2.429 seconds (process running for 3.201)
+2026-06-13 21:19:06.721 [main] INFO  com.longan.LonganApexApplication - 启动成功
+2026-06-13 21:19:20.133 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-13 21:19:20.284 [http-nio-8080-exec-1] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:39)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-13 21:19:20.284 [http-nio-8080-exec-2] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:39)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-13 21:19:39.827 [http-nio-8080-exec-3] INFO  com.longan.user.controller.UserController - 登录：LoginDTO(email=user1.com, password=000)
+2026-06-13 21:19:39.833 [http-nio-8080-exec-3] INFO  com.longan.user.service.impl.UserServiceImpl - 执行用户查询，条件：(email = #{ew.paramNameValuePairs.MPGENVAL1})
+2026-06-13 21:19:39.875 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-13 21:19:39.982 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58600cfb
+2026-06-13 21:19:39.983 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-13 21:19:40.022 [http-nio-8080-exec-3] INFO  com.longan.user.service.impl.UserServiceImpl - 用户登录成功，邮箱：user1.com
+2026-06-13 21:20:16.844 [http-nio-8080-exec-6] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:20:16.911 [http-nio-8080-exec-7] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:20:18.233 [http-nio-8080-exec-9] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:20:21.063 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:20:36.197 [http-nio-8080-exec-9] INFO  com.longan.user.controller.UserProfileController - 更新用户资料：UserProfileDTO(gender=1, birthday=null, address=, signature=)
+2026-06-13 21:20:51.468 [http-nio-8080-exec-2] INFO  com.longan.goods.controller.GoodsController - 修改商品状态：0
+2026-06-13 21:21:02.149 [http-nio-8080-exec-5] INFO  com.longan.goods.controller.GoodsController - 商品详情：1013
+2026-06-13 21:21:06.388 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:21:27.769 [http-nio-8080-exec-5] INFO  com.longan.goods.controller.GoodsController - 商品详情：1001
+2026-06-13 21:21:38.024 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:21:41.665 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:0
+2026-06-13 21:21:42.106 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:1
+2026-06-13 21:21:43.352 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:2
+2026-06-13 21:21:43.793 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:3
+2026-06-13 21:21:44.385 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:5
+2026-06-13 21:21:44.994 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:21:46.856 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:1
+2026-06-13 21:21:47.258 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:2
+2026-06-13 21:21:47.584 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:3
+2026-06-13 21:21:47.889 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:5
+2026-06-13 21:23:25.268 [http-nio-8080-exec-6] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-06-13 21:23:25.880 [http-nio-8080-exec-5] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:23:25.893 [http-nio-8080-exec-8] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:23:27.001 [http-nio-8080-exec-4] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:23:27.017 [http-nio-8080-exec-9] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:23:27.644 [http-nio-8080-exec-8] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:23:29.046 [http-nio-8080-exec-2] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:23:36.144 [http-nio-8080-exec-3] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:25:11.205 [http-nio-8080-exec-4] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:26:28.239 [http-nio-8080-exec-9] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:29:40.542 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:29:46.337 [http-nio-8080-exec-10] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:29:58.180 [http-nio-8080-exec-6] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:30:08.403 [http-nio-8080-exec-7] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:30:08.495 [http-nio-8080-exec-1] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:30:09.050 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-13 21:30:09.054 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-13 21:30:10.716 [main] INFO  com.longan.LonganApexApplication - Starting LonganApexApplication using Java 21.0.2 with PID 9975 (/mnt/data/Projects/test/longan-apex/longan_apex/target/classes started by fedora in /mnt/data/Projects/test/longan-apex)
+2026-06-13 21:30:10.717 [main] DEBUG com.longan.LonganApexApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-06-13 21:30:10.717 [main] INFO  com.longan.LonganApexApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-13 21:30:11.533 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-13 21:30:11.534 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-13 21:30:11.534 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-06-13 21:30:11.559 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-13 21:30:12.302 [main] INFO  com.longan.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-06-13 21:30:12.523 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-13 21:30:12.535 [main] INFO  com.longan.LonganApexApplication - Started LonganApexApplication in 2.296 seconds (process running for 2.768)
+2026-06-13 21:30:12.538 [main] INFO  com.longan.LonganApexApplication - 启动成功
+2026-06-13 21:30:14.125 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-13 21:30:14.336 [http-nio-8080-exec-2] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:30:20.836 [http-nio-8080-exec-4] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:30:20.840 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-13 21:30:20.951 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34b534b9
+2026-06-13 21:30:20.953 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-13 21:30:25.101 [http-nio-8080-exec-6] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:30:26.282 [http-nio-8080-exec-8] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:30:27.826 [http-nio-8080-exec-10] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:30:45.683 [http-nio-8080-exec-2] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+io.jsonwebtoken.ExpiredJwtException: JWT expired 678306682 milliseconds ago at 2026-06-05T17:05:39.000Z. Current time: 2026-06-13T13:30:45.682Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:691)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:39)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-13 21:30:45.683 [http-nio-8080-exec-3] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+io.jsonwebtoken.ExpiredJwtException: JWT expired 678306682 milliseconds ago at 2026-06-05T17:05:39.000Z. Current time: 2026-06-13T13:30:45.682Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:691)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:39)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-13 21:30:45.769 [http-nio-8080-exec-7] ERROR com.longan.config.WebSocketConfig - WebSocket JWT 认证失败
+io.jsonwebtoken.ExpiredJwtException: JWT expired 678306768 milliseconds ago at 2026-06-05T17:05:39.000Z. Current time: 2026-06-13T13:30:45.768Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:691)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.config.WebSocketConfig$1.preSend(WebSocketConfig.java:54)
+	at org.springframework.messaging.support.AbstractMessageChannel$ChannelInterceptorChain.applyPreSend(AbstractMessageChannel.java:181)
+	at org.springframework.messaging.support.AbstractMessageChannel.send(AbstractMessageChannel.java:135)
+	at org.springframework.messaging.support.AbstractMessageChannel.send(AbstractMessageChannel.java:125)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:343)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:357)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:346)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.handleMessage(WebSocketServerSockJsSession.java:199)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.handleTextMessage(SockJsWebSocketHandler.java:93)
+	at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:389)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:483)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:283)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:129)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-13 21:30:51.694 [http-nio-8080-exec-9] INFO  com.longan.user.controller.UserController - 登录：LoginDTO(email=user2.com, password=000)
+2026-06-13 21:30:51.694 [http-nio-8080-exec-9] INFO  com.longan.user.service.impl.UserServiceImpl - 执行用户查询，条件：(email = #{ew.paramNameValuePairs.MPGENVAL1})
+2026-06-13 21:30:51.701 [http-nio-8080-exec-9] INFO  com.longan.user.service.impl.UserServiceImpl - 用户登录成功，邮箱：user2.com
+2026-06-13 21:30:53.293 [http-nio-8080-exec-2] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1002
+2026-06-13 21:30:53.313 [http-nio-8080-exec-4] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:30:54.325 [http-nio-8080-exec-6] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1002
+2026-06-13 21:31:01.986 [http-nio-8080-exec-8] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1001, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:31:03.977 [http-nio-8080-exec-10] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1001, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:31:15.303 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1001, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:31:40.890 [http-nio-8080-exec-3] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1001, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:32:50.260 [http-nio-8080-exec-2] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1002, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=nihc, type=1)
+2026-06-13 21:33:39.722 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-13 21:33:39.727 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-13 21:33:42.328 [main] INFO  com.longan.LonganApexApplication - Starting LonganApexApplication using Java 21.0.2 with PID 11161 (/mnt/data/Projects/test/longan-apex/longan_apex/target/classes started by fedora in /mnt/data/Projects/test/longan-apex)
+2026-06-13 21:33:42.329 [main] DEBUG com.longan.LonganApexApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-06-13 21:33:42.330 [main] INFO  com.longan.LonganApexApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-13 21:33:43.151 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-13 21:33:43.152 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-13 21:33:43.153 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-06-13 21:33:43.180 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-13 21:33:44.026 [main] INFO  com.longan.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-06-13 21:33:44.302 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-13 21:33:44.315 [main] INFO  com.longan.LonganApexApplication - Started LonganApexApplication in 2.437 seconds (process running for 2.93)
+2026-06-13 21:33:44.318 [main] INFO  com.longan.LonganApexApplication - 启动成功
+2026-06-13 21:33:44.770 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-13 21:33:44.986 [http-nio-8080-exec-3] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:33:44.986 [http-nio-8080-exec-4] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:33:49.587 [http-nio-8080-exec-7] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1002, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:33:49.590 [http-nio-8080-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-13 21:33:49.687 [http-nio-8080-exec-7] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@105fe47a
+2026-06-13 21:33:49.688 [http-nio-8080-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-13 21:33:55.998 [http-nio-8080-exec-8] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1002, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:33:58.484 [http-nio-8080-exec-8] INFO  com.longan.chat.service.impl.ChatServiceImpl - 消息发送成功: senderId=1002, receiverId=1001, conversationId=3001
+2026-06-13 21:33:58.491 [http-nio-8080-exec-7] INFO  com.longan.chat.service.impl.ChatServiceImpl - 消息发送成功: senderId=1002, receiverId=1001, conversationId=3001
+2026-06-13 21:34:05.084 [http-nio-8080-exec-9] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1001, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=你好呀, type=1)
+2026-06-13 21:34:05.093 [http-nio-8080-exec-9] INFO  com.longan.chat.service.impl.ChatServiceImpl - 消息发送成功: senderId=1001, receiverId=1002, conversationId=3001
+2026-06-13 21:34:14.116 [http-nio-8080-exec-10] INFO  com.longan.chat.controller.ChatController - 发送消息，senderId: 1002, dto: SendMessageDTO(conversationId=3001, receiverId=null, goodsId=null, content=嗯嗯, type=1)
+2026-06-13 21:34:14.124 [http-nio-8080-exec-10] INFO  com.longan.chat.service.impl.ChatServiceImpl - 消息发送成功: senderId=1002, receiverId=1001, conversationId=3001
+2026-06-13 21:34:20.563 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:34:22.269 [http-nio-8080-exec-4] INFO  com.longan.chat.controller.ChatController - 查询消息历史，conversationId: 3001, userId: 1001
+2026-06-13 21:34:23.517 [http-nio-8080-exec-2] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:34:23.533 [http-nio-8080-exec-4] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:34:25.151 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:34:25.166 [http-nio-8080-exec-4] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:34:32.762 [http-nio-8080-exec-7] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:34:32.776 [http-nio-8080-exec-3] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:34:33.917 [http-nio-8080-exec-7] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:34:33.932 [http-nio-8080-exec-4] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:34:40.833 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:34:41.355 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:34:43.398 [http-nio-8080-exec-10] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-06-13 21:34:44.878 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:34:45.256 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:34:49.142 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:34:49.757 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:34:51.750 [http-nio-8080-exec-3] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-06-13 21:34:53.247 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:34:53.262 [http-nio-8080-exec-9] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:34:54.374 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:34:54.385 [http-nio-8080-exec-2] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:35:01.383 [http-nio-8080-exec-2] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-06-13 21:38:18.811 [http-nio-8080-exec-4] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1002
+2026-06-13 21:38:18.839 [http-nio-8080-exec-6] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:38:22.814 [http-nio-8080-exec-4] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1002
+2026-06-13 21:38:22.845 [http-nio-8080-exec-9] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:38:29.247 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1002
+2026-06-13 21:38:29.268 [http-nio-8080-exec-8] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:39:56.044 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1002
+2026-06-13 21:39:56.060 [http-nio-8080-exec-5] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:39:56.975 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:40:00.242 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:40:01.338 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:40:12.953 [http-nio-8080-exec-1] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-06-13 21:40:15.501 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:40:17.403 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:40:18.154 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:40:33.083 [http-nio-8080-exec-6] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-06-13 21:40:52.816 [http-nio-8080-exec-2] INFO  com.longan.common.controller.CommonController - user 图片已存入: /var/www/pic_bed/user/9bd093cc-4fff-4906-8aa7-64b1bbd481ce.png
+2026-06-13 21:41:17.252 [http-nio-8080-exec-10] INFO  com.longan.user.controller.UserProfileController - 更新用户资料：UserProfileDTO(gender=2, birthday=2026-06-01, address=, signature=)
+2026-06-13 21:41:19.203 [http-nio-8080-exec-1] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1002
+2026-06-13 21:41:19.220 [http-nio-8080-exec-5] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1002
+2026-06-13 21:41:20.105 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:41:49.653 [http-nio-8080-exec-2] INFO  com.longan.goods.controller.GoodsController - 商品详情：1012
+2026-06-13 21:51:29.023 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:51:29.841 [http-nio-8080-exec-7] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:51:29.857 [http-nio-8080-exec-2] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:51:31.243 [http-nio-8080-exec-7] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:51:31.254 [http-nio-8080-exec-8] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:51:37.547 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:51:39.023 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:51:41.938 [http-nio-8080-exec-8] INFO  com.longan.goods.controller.GoodsController - 商品详情：1001
+2026-06-13 21:51:45.664 [http-nio-8080-exec-5] INFO  com.longan.goods.controller.GoodsController - 商品详情：1024
+2026-06-13 21:51:46.706 [http-nio-8080-exec-6] INFO  com.longan.goods.controller.GoodsController - 商品详情：1024
+2026-06-13 21:52:00.566 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 用户1001创建订单，商品ID:1024
+2026-06-13 21:52:00.593 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 用户 1001 尝试购买订单 2065794317594284033
+2026-06-13 21:52:00.672 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询订单详情：2065794317594284033
+2026-06-13 21:52:12.331 [http-nio-8080-exec-10] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:52:12.347 [http-nio-8080-exec-9] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:52:13.599 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:52:15.948 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:52:17.155 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:52:17.724 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询订单详情：2065794317594284033
+2026-06-13 21:52:22.975 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 订单2065794317594284033已发货，物流号:1903721321=
+2026-06-13 21:52:22.998 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询订单详情：2065794317594284033
+2026-06-13 21:52:27.545 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 订单2065794317594284033确认收货
+2026-06-13 21:52:27.570 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询订单详情：2065794317594284033
+2026-06-13 21:52:37.053 [http-nio-8080-exec-2] INFO  com.longan.chat.controller.ChatController - 查询会话列表，userId: 1001
+2026-06-13 21:52:37.065 [http-nio-8080-exec-3] INFO  com.longan.config.WebSocketConfig - WebSocket 连接认证成功，userId: 1001
+2026-06-13 21:52:37.743 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:52:40.264 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:0
+2026-06-13 21:52:40.733 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:52:41.308 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询订单详情：2065794317594284033
+2026-06-13 21:52:42.582 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:52:43.611 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-06-13 21:52:44.428 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询订单详情：2065794317594284033
+2026-06-13 21:52:51.739 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-06-13 21:56:00.092 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-13 21:56:00.098 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

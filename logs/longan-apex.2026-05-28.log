@@ -1,0 +1,1196 @@
+2026-05-28 18:23:22.730 [main] INFO  com.longan.LonganApexApplication - Starting LonganApexApplication using Java 21.0.2 with PID 67548 (/mnt/data/Projects/test/longan-apex/longan_apex/target/classes started by fedora in /mnt/data/Projects/test/longan-apex)
+2026-05-28 18:23:22.735 [main] DEBUG com.longan.LonganApexApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-05-28 18:23:22.736 [main] INFO  com.longan.LonganApexApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-28 18:23:23.742 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-28 18:23:23.745 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-28 18:23:23.745 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-05-28 18:23:23.784 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-28 18:23:24.519 [main] INFO  com.longan.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-05-28 18:23:24.831 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-28 18:23:24.850 [main] INFO  com.longan.LonganApexApplication - Started LonganApexApplication in 2.566 seconds (process running for 3.48)
+2026-05-28 18:23:24.853 [main] INFO  com.longan.LonganApexApplication - 启动成功
+2026-05-28 18:23:37.236 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28 18:23:37.262 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5ODY0MjIyLCJleHAiOjE3Nzk4NzE0MjJ9.aMd3BTo5HPSQshEZsPAGjwRqCuQypHtsPJWjwzMHnrQ
+2026-05-28 18:23:37.262 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5ODY0MjIyLCJleHAiOjE3Nzk4NzE0MjJ9.aMd3BTo5HPSQshEZsPAGjwRqCuQypHtsPJWjwzMHnrQ
+2026-05-28 18:23:37.392 [http-nio-8080-exec-1] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+io.jsonwebtoken.ExpiredJwtException: JWT expired 92395391 milliseconds ago at 2026-05-27T08:43:42.000Z. Current time: 2026-05-28T10:23:37.391Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:691)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:40)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-28 18:23:37.392 [http-nio-8080-exec-2] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+io.jsonwebtoken.ExpiredJwtException: JWT expired 92395391 milliseconds ago at 2026-05-27T08:43:42.000Z. Current time: 2026-05-28T10:23:37.391Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:691)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:40)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-28 18:23:53.847 [http-nio-8080-exec-3] INFO  com.longan.user.controller.UserController - 登录：LoginDTO(email=123456789, password=000000)
+2026-05-28 18:23:53.863 [http-nio-8080-exec-3] INFO  com.longan.user.service.impl.UserServiceImpl - 执行用户查询，条件：(email = #{ew.paramNameValuePairs.MPGENVAL1})
+2026-05-28 18:23:53.913 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-28 18:23:54.022 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a5dc7f3
+2026-05-28 18:23:54.024 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-28 18:23:54.069 [http-nio-8080-exec-3] INFO  com.longan.user.service.impl.UserServiceImpl - 用户登录成功，邮箱：123456789
+2026-05-28 18:23:54.114 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODM0LCJleHAiOjE3Nzk5NzEwMzR9.C55iL_NaGWaWbtLXsVgu9P-IxBuVVfK6p4BhMjRPd9w
+2026-05-28 18:23:54.117 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:23:54.126 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:23:54.238 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODM0LCJleHAiOjE3Nzk5NzEwMzR9.C55iL_NaGWaWbtLXsVgu9P-IxBuVVfK6p4BhMjRPd9w
+2026-05-28 18:23:54.238 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODM0LCJleHAiOjE3Nzk5NzEwMzR9.C55iL_NaGWaWbtLXsVgu9P-IxBuVVfK6p4BhMjRPd9w
+2026-05-28 18:23:54.240 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:23:54.240 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:23:54.244 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:23:54.377 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:05.289 [http-nio-8080-exec-7] INFO  com.longan.user.controller.UserController - 登录：LoginDTO(email=123456789, password=000000)
+2026-05-28 18:24:05.289 [http-nio-8080-exec-7] INFO  com.longan.user.service.impl.UserServiceImpl - 执行用户查询，条件：(email = #{ew.paramNameValuePairs.MPGENVAL1})
+2026-05-28 18:24:05.292 [http-nio-8080-exec-7] INFO  com.longan.user.service.impl.UserServiceImpl - 用户登录成功，邮箱：123456789
+2026-05-28 18:24:05.304 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:05.305 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:05.309 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:05.372 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:05.372 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:05.373 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:05.373 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:05.376 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:05.422 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:14.339 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:14.340 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:14.344 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:14.354 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:14.354 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:14.354 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:14.355 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:14.355 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:14.355 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:14.358 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:14.360 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:14.361 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:17.579 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:17.580 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:17.583 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:17.595 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:17.595 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:17.595 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:24:17.595 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:17.596 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:17.596 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:24:17.598 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:17.598 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:17.598 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:27.300 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：null
+2026-05-28 18:24:27.301 [http-nio-8080-exec-10] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+java.lang.IllegalArgumentException: CharSequence cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:151)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:28)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:40)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-28 18:24:27.308 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：null
+2026-05-28 18:24:27.308 [http-nio-8080-exec-9] ERROR com.longan.JWT.JwtTokenInterceptor - JWT校验失败
+java.lang.IllegalArgumentException: CharSequence cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:151)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:28)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.longan.JWT.JwtUtil.parseJWT(JwtUtil.java:44)
+	at com.longan.JWT.JwtTokenInterceptor.preHandle(JwtTokenInterceptor.java:40)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-28 18:24:37.260 [http-nio-8080-exec-2] INFO  com.longan.user.controller.UserController - 登录：LoginDTO(email=987654321, password=000000)
+2026-05-28 18:24:37.261 [http-nio-8080-exec-2] INFO  com.longan.user.service.impl.UserServiceImpl - 执行用户查询，条件：(email = #{ew.paramNameValuePairs.MPGENVAL1})
+2026-05-28 18:24:37.264 [http-nio-8080-exec-2] INFO  com.longan.user.service.impl.UserServiceImpl - 用户登录成功，邮箱：987654321
+2026-05-28 18:24:37.272 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:37.273 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:37.276 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:37.323 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:37.323 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:37.324 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:37.324 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:37.328 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:37.366 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:42.313 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:42.316 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:42.320 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:42.329 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:42.329 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:42.329 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:42.330 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:42.330 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:42.330 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:42.333 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:42.333 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:42.333 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:44.474 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:44.474 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:44.504 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:46.407 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:46.408 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:46.416 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:47.232 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:47.233 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:47.269 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:48.046 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:48.048 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:48.051 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:48.060 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:48.060 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:48.060 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:48.061 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:48.061 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:48.061 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:48.063 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:48.063 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:48.063 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:49.214 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:49.215 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:49.252 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:50.672 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:50.673 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:50.675 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:24:50.689 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:52.797 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:52.798 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:52.836 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:24:59.117 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:24:59.118 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:24:59.136 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:01.695 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:01.696 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:01.710 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:05.016 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:05.016 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:05.017 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:25:05.026 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:06.591 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:06.592 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:06.592 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:25:06.611 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:12.305 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:12.306 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:12.330 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:18.714 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:18.715 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:18.715 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:25:18.729 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:21.095 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:21.095 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:21.096 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:25:21.105 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:22.044 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:22.045 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:22.060 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:22.826 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:22.827 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:22.832 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:23.783 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:23.784 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:23.793 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:27.667 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:27.668 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:27.670 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:28.729 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:28.730 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:28.731 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:25:28.744 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:29.983 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:29.984 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:29.985 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询订单详情：2001
+2026-05-28 18:25:29.993 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:35.149 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:35.150 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:35.151 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询订单详情：2001
+2026-05-28 18:25:35.168 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:43.743 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:43.744 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:43.749 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:43.759 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:43.759 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:43.759 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:43.759 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:43.759 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:43.759 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:43.762 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:43.762 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:43.764 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:47.301 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:47.301 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:47.302 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:25:47.315 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:48.652 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:48.653 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:48.658 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:49.669 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:49.670 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:49.672 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:50.594 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:25:50.595 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:25:50.596 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:25:50.608 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:25:54.045 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:25:54.046 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:25:54.078 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 用户 1001 尝试购买订单 2001
+2026-05-28 18:25:54.091 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:01.102 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:26:01.102 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:26:01.103 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 取消订单：2001
+2026-05-28 18:26:01.131 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:01.146 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:26:01.147 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:26:01.148 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询订单详情：2001
+2026-05-28 18:26:01.153 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:02.778 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:26:02.779 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:26:02.782 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:02.796 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:26:02.796 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:26:02.796 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:26:02.796 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:26:02.796 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:26:02.796 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:26:02.799 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:02.799 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:02.799 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:06.853 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:06.855 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:06.855 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:26:06.865 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:07.869 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:07.870 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:07.871 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:26:07.884 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:09.877 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:09.878 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:09.879 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询订单详情：2001
+2026-05-28 18:26:09.883 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:12.050 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:12.052 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:12.054 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:12.064 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:12.064 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:12.064 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:12.065 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:12.065 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:12.065 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:12.067 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:12.067 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:12.067 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:14.302 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:14.303 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:14.330 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:19.729 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:19.730 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:19.763 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:22.199 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:22.200 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:22.201 [http-nio-8080-exec-8] INFO  com.longan.goods.controller.GoodsController - 商品详情：1001
+2026-05-28 18:26:22.211 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:23.561 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:23.561 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:23.562 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:23.562 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:23.563 [http-nio-8080-exec-7] INFO  com.longan.goods.controller.GoodsController - 商品详情：1001
+2026-05-28 18:26:23.567 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:23.569 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:28.136 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:28.137 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:28.139 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:28.148 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:28.148 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:28.148 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:28.149 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:28.149 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:28.151 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:28.152 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:28.152 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:28.153 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:26:29.819 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:26:29.820 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:26:29.823 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:00.833 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:00.834 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:00.868 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:00.879 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:00.880 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:00.883 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:02.538 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:02.539 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:02.595 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:06.935 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:06.936 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:06.937 [http-nio-8080-exec-10] INFO  com.longan.goods.controller.GoodsController - 商品详情：1013
+2026-05-28 18:27:06.944 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:09.050 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:09.050 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:09.079 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:09.903 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:09.904 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:09.904 [http-nio-8080-exec-9] INFO  com.longan.goods.controller.GoodsController - 商品详情：1001
+2026-05-28 18:27:09.911 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:11.593 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:11.593 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:11.593 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:11.594 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:11.594 [http-nio-8080-exec-4] INFO  com.longan.goods.controller.GoodsController - 商品详情：1001
+2026-05-28 18:27:11.597 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:11.600 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:13.350 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:13.351 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:13.354 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 用户1002创建订单，商品ID:1001
+2026-05-28 18:27:13.369 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:13.375 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:13.376 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:13.377 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 用户 1002 尝试购买订单 2059944575441657858
+2026-05-28 18:27:13.381 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:15.342 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:15.343 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:15.369 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:17.647 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:17.648 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:17.650 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:17.660 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:17.660 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:17.660 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:17.661 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:17.661 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:17.661 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:17.663 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:17.663 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:17.663 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:18.822 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:18.823 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:18.823 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:27:18.837 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:20.089 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:20.089 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:20.090 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944575441657858
+2026-05-28 18:27:20.095 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:23.038 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:23.039 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:23.040 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 用户 1002 尝试购买订单 2059944575441657858
+2026-05-28 18:27:23.043 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:25.729 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:25.730 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:25.731 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 取消订单：2059944575441657858
+2026-05-28 18:27:25.742 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:25.750 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:25.751 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:25.751 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944575441657858
+2026-05-28 18:27:25.756 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:27.054 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:27.054 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:27.057 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:27.065 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:27.065 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:27.065 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:27.065 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:27.065 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:27.065 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:27.067 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:27.067 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:27.067 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:29.028 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:29.029 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:29.029 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:27:29.044 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:30.729 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:30.730 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:30.751 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:34.388 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:34.389 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:34.407 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:39.445 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:39.446 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:39.446 [http-nio-8080-exec-4] INFO  com.longan.goods.controller.GoodsController - 商品详情：1010
+2026-05-28 18:27:39.451 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:40.575 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:40.575 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:40.576 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:40.576 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:40.576 [http-nio-8080-exec-6] INFO  com.longan.goods.controller.GoodsController - 商品详情：1010
+2026-05-28 18:27:40.579 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:40.583 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:42.144 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:42.144 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:42.145 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 用户1002创建订单，商品ID:1010
+2026-05-28 18:27:42.176 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:42.183 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:42.183 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:42.184 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 用户 1002 尝试购买订单 2059944696178892801
+2026-05-28 18:27:42.206 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:42.223 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:42.224 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:42.225 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944696178892801
+2026-05-28 18:27:42.230 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:58.435 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:58.436 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:58.440 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 订单2059944696178892801已发货，物流号:000000001=
+2026-05-28 18:27:58.449 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:27:58.459 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:27:58.460 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:27:58.461 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944696178892801
+2026-05-28 18:27:58.466 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:04.118 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:04.118 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:04.119 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 订单2059944696178892801确认收货
+2026-05-28 18:28:04.137 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:04.147 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:04.148 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:04.148 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944696178892801
+2026-05-28 18:28:04.153 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:06.844 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:06.844 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:06.846 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:06.857 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:06.857 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:06.857 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:06.858 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:06.858 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:06.858 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:06.859 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:06.859 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:06.859 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:09.568 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:09.569 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:09.579 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:12.847 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:12.848 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:12.849 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:28:12.863 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:14.219 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:14.220 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:14.221 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:28:14.234 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:15.306 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:15.306 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:15.309 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:16.918 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:16.919 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:16.943 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:21.381 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:21.381 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:21.382 [http-nio-8080-exec-2] INFO  com.longan.goods.controller.GoodsController - 商品详情：1013
+2026-05-28 18:28:21.388 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:28.283 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:28.283 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:28.284 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:28.284 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:28.284 [http-nio-8080-exec-4] INFO  com.longan.goods.controller.GoodsController - 商品详情：1013
+2026-05-28 18:28:28.287 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:28.291 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:31.170 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:31.171 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:31.171 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 用户1002创建订单，商品ID:1013
+2026-05-28 18:28:31.180 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:31.187 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:31.188 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:31.189 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 用户 1002 尝试购买订单 2059944901808840705
+2026-05-28 18:28:31.198 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:31.216 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:31.217 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:31.217 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:28:31.223 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:34.950 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:34.951 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:34.953 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:34.961 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:34.961 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:34.962 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:34.962 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:34.962 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:34.962 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:34.964 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:34.964 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:34.964 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:37.858 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:28:37.858 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:28:37.859 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:28:37.870 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:39.336 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:28:39.336 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:28:39.336 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:28:39.348 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:40.692 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:28:40.693 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:28:40.693 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:28:40.698 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:48.071 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:28:48.072 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:28:48.074 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 订单2059944901808840705已发货，物流号:000000002=
+2026-05-28 18:28:48.080 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:48.094 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:28:48.094 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:28:48.095 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:28:48.099 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:52.363 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:52.364 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:52.364 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:28:52.382 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:57.491 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:57.491 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:57.492 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:28:57.504 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:28:58.940 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:28:58.940 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:28:58.941 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:28:58.946 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:11.741 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:11.742 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:11.745 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 用户1002申请退款，订单ID:2059944901808840705
+2026-05-28 18:29:11.756 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:11.765 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:11.765 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:11.766 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:29:11.770 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:15.807 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:15.808 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:15.810 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:15.828 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:15.828 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:15.828 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:15.828 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:15.828 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:15.828 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:15.830 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:15.830 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:15.830 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:17.604 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:17.605 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:17.605 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:29:17.616 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:19.008 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:19.009 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:19.009 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:29:19.012 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:41.630 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:41.630 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:41.631 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 卖家拒绝退款，订单ID:2059944901808840705
+2026-05-28 18:29:41.641 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:41.654 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:41.655 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:41.655 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:29:41.659 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:43.562 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:43.563 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:43.565 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:43.576 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:43.576 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:43.576 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:29:43.576 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:43.576 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:43.576 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:29:43.578 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:43.578 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:43.578 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:45.953 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:45.954 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:45.956 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:45.967 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:45.967 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:45.967 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:45.968 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:45.968 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:45.968 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:45.970 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:45.970 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:45.970 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:47.598 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:47.598 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:47.599 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:29:47.614 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:29:49.013 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:29:49.013 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:29:49.014 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:29:49.025 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:30:02.658 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:30:02.659 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:30:02.660 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 用户1002申请退款，订单ID:2059944901808840705
+2026-05-28 18:30:02.691 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:30:02.700 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:30:02.700 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:30:02.700 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:30:02.705 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:30:05.233 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:30:05.234 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:30:05.234 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:30:05.247 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:30:06.452 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:30:06.452 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:30:06.453 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:30:06.457 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:30:09.271 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:30:09.272 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:30:09.273 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:30:09.282 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:30:41.260 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:30:41.261 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:30:53.553 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:31:12.473 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:31:16.725 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:31:16.726 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:31:16.727 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:32:47.625 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m49s410ms240µs217ns).
+2026-05-28 18:35:54.641 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m7s15ms973µs551ns).
+2026-05-28 18:35:59.784 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:35:59.785 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:35:59.786 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:35:59.787 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:40:51.450 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m56s809ms84µs390ns).
+2026-05-28 18:40:51.456 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:40:51.483 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-28 18:40:51.490 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-28 18:40:53.230 [main] INFO  com.longan.LonganApexApplication - Starting LonganApexApplication using Java 21.0.2 with PID 75249 (/mnt/data/Projects/test/longan-apex/longan_apex/target/classes started by fedora in /mnt/data/Projects/test/longan-apex)
+2026-05-28 18:40:53.231 [main] DEBUG com.longan.LonganApexApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-05-28 18:40:53.232 [main] INFO  com.longan.LonganApexApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-28 18:40:54.240 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-28 18:40:54.241 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-28 18:40:54.241 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-05-28 18:40:54.274 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-28 18:40:54.967 [main] INFO  com.longan.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-05-28 18:40:55.293 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-28 18:40:55.307 [main] INFO  com.longan.LonganApexApplication - Started LonganApexApplication in 2.514 seconds (process running for 3.079)
+2026-05-28 18:40:55.309 [main] INFO  com.longan.LonganApexApplication - 启动成功
+2026-05-28 18:41:05.002 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28 18:41:05.028 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:41:05.136 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:41:05.156 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-28 18:41:05.280 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2858bea9
+2026-05-28 18:41:05.282 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-28 18:41:05.285 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:41:05.381 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:41:52.550 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:41:52.551 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:41:52.553 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:42:36.129 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m746ms962µs37ns).
+2026-05-28 18:42:43.410 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:43:37.379 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:43:37.380 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:43:37.382 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:43:40.459 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:44:37.069 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:44:37.070 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:44:37.071 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:44:37.080 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:47:57.551 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:47:57.552 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:47:57.553 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 卖家同意退款，订单ID:2059944901808840705
+2026-05-28 18:47:57.659 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:47:57.677 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:47:57.678 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:47:57.679 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:47:57.694 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:00.200 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:00.201 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:00.206 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:00.280 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:00.281 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:00.282 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:00.282 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:00.283 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:00.283 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:00.285 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:00.286 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:00.287 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:03.859 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:03.860 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:03.922 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:07.664 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:07.664 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:07.674 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:09.488 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:09.488 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:09.497 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:10.860 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:10.860 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:10.870 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:11.870 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:11.871 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:11.871 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:48:11.885 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:13.693 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:13.694 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:13.694 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:48:13.705 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:13.876 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:13.876 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:13.877 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:48:13.887 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:17.882 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:17.883 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:17.887 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:17.902 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:17.902 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:17.902 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:17.903 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:17.903 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:17.903 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:17.909 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:17.911 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:17.909 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:19.621 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:19.622 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:19.630 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:36.537 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:36.539 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:36.539 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:48:36.556 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:41.055 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:41.056 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:41.056 [http-nio-8080-exec-4] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-05-28 18:48:41.060 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:42.366 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:42.367 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:42.367 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:48:42.387 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:44.986 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:44.987 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:44.996 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:46.153 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:46.154 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:46.155 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:48:46.170 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:48.346 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:48.347 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:48.396 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:49.612 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:49.612 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:49.613 [http-nio-8080-exec-1] INFO  com.longan.goods.controller.GoodsController - 商品详情：1013
+2026-05-28 18:48:49.627 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:50.679 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:50.680 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:50.680 [http-nio-8080-exec-9] INFO  com.longan.goods.controller.GoodsController - 商品详情：1013
+2026-05-28 18:48:50.681 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:50.682 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:50.686 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:50.688 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:51.819 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:51.820 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:51.841 [http-nio-8080-exec-2] INFO  com.longan.order.controller.OrderController - 用户1002创建订单，商品ID:1013
+2026-05-28 18:48:51.857 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:51.862 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:51.864 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:51.865 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 用户 1002 尝试购买订单 2059950021690880002
+2026-05-28 18:48:51.879 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:51.902 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:48:51.903 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:48:51.903 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:48:51.911 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:56.204 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:56.205 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:56.205 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944901808840705
+2026-05-28 18:48:56.211 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:58.311 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:58.312 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:58.315 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:58.326 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:58.326 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:58.326 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:48:58.327 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:58.327 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:58.327 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:48:58.330 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:58.330 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:48:58.330 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:00.173 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:00.174 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:00.174 [http-nio-8080-exec-10] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:49:00.192 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:01.701 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:01.702 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:01.702 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:01.708 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:04.579 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:04.580 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:04.583 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:04.594 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:04.594 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:04.594 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:04.595 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:04.595 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:04.595 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:04.597 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:04.597 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:04.598 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:05.898 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:05.899 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:05.900 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:49:05.918 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:07.314 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:07.314 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:07.315 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:07.318 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:13.947 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:13.948 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:13.950 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 订单2059950021690880002已发货，物流号:12904120912=
+2026-05-28 18:49:13.960 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:13.979 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:13.980 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:13.980 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:13.987 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:22.206 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:22.207 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:22.210 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:22.220 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:22.220 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:22.220 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:22.221 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:22.221 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:22.221 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:22.223 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:22.223 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:22.223 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:24.169 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:24.169 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:24.170 [http-nio-8080-exec-4] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:49:24.195 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:25.411 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:25.411 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:25.412 [http-nio-8080-exec-3] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:25.417 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:29.688 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:29.689 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:29.690 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 订单2059950021690880002确认收货
+2026-05-28 18:49:29.709 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:29.717 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:29.718 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:29.718 [http-nio-8080-exec-8] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:29.725 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:32.114 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:32.114 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:32.117 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:32.139 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:32.139 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:32.139 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:32.140 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:32.140 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:32.140 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:32.143 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:32.143 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:32.143 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:33.619 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:33.620 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:33.621 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:49:33.637 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:34.823 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:34.824 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:34.824 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:34.830 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:36.929 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:36.931 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:36.933 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:36.945 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:36.945 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:36.945 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:49:36.945 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:36.945 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:36.945 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:49:36.948 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:36.948 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:36.948 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:39.032 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:39.033 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:39.037 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:39.047 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:39.047 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:39.047 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:39.048 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:39.048 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:39.048 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:39.051 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:39.051 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:39.051 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:40.718 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:40.719 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:40.720 [http-nio-8080-exec-5] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:49:40.740 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:45.849 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:45.850 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:45.850 [http-nio-8080-exec-9] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059944696178892801
+2026-05-28 18:49:45.857 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:48.720 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:48.721 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:48.724 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:48.733 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:48.733 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:48.733 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:48.734 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:48.734 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:48.734 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:48.736 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:48.736 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:48.736 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:50.444 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:50.445 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:50.446 [http-nio-8080-exec-7] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:1，状态:null
+2026-05-28 18:49:50.465 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:51.623 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:51.623 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:51.624 [http-nio-8080-exec-1] INFO  com.longan.order.controller.OrderController - 查询订单详情：2059950021690880002
+2026-05-28 18:49:51.631 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:53.333 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:53.334 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:53.337 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:53.347 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:53.347 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:53.347 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:53.348 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:53.348 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:53.348 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:53.351 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:53.351 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:53.351 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:55.226 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:55.227 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:55.232 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:57.441 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:57.441 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:57.450 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:58.277 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:58.277 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:58.278 [http-nio-8080-exec-6] INFO  com.longan.order.controller.OrderController - 查询我的订单列表，角色:2，状态:null
+2026-05-28 18:49:58.297 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:49:59.300 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:49:59.301 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:49:59.301 [http-nio-8080-exec-3] INFO  com.longan.user.controller.UserProfileController - 获取用户资料
+2026-05-28 18:49:59.304 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:50:02.153 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:50:02.154 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:50:02.159 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:50:04.544 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:50:04.545 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:50:04.576 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:50:05.509 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTYzODc3LCJleHAiOjE3Nzk5NzEwNzd9.jrD9Sl7HHuvajNEPfaRk77QwkxlLbi0Sxh8ZsCscbPk
+2026-05-28 18:50:05.510 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:50:05.513 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:50:30.293 [http-nio-8080-exec-5] INFO  org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 345 ms
+2026-05-28 18:53:01.263 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:01.263 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:01.263 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:01.263 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:01.267 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:01.296 [http-nio-8080-exec-3] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:03.817 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:03.818 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:03.820 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:03.844 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:03.844 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:03.844 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:03.845 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:03.845 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:03.845 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:03.847 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:03.847 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:03.847 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:05.115 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:05.116 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:05.146 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:08.155 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:08.156 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:08.158 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:08.172 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:08.172 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:08.172 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMSwiaWF0IjoxNzc5OTYzODQ1LCJleHAiOjE3Nzk5NzEwNDV9.Kabym_xkPKed_XTDto4fm0rZau4TGYWwkcpxkVgP9jU
+2026-05-28 18:53:08.173 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:08.173 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:08.173 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1001
+2026-05-28 18:53:08.175 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:08.175 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:08.175 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:21.635 [http-nio-8080-exec-3] INFO  com.longan.user.controller.UserController - 登录：LoginDTO(email=user2.com, password=000)
+2026-05-28 18:53:21.635 [http-nio-8080-exec-3] INFO  com.longan.user.service.impl.UserServiceImpl - 执行用户查询，条件：(email = #{ew.paramNameValuePairs.MPGENVAL1})
+2026-05-28 18:53:21.638 [http-nio-8080-exec-3] INFO  com.longan.user.service.impl.UserServiceImpl - 用户登录成功，邮箱：user2.com
+2026-05-28 18:53:21.662 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:21.663 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:21.665 [http-nio-8080-exec-7] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:21.732 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:21.732 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:21.733 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:21.733 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:21.735 [http-nio-8080-exec-9] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:21.759 [http-nio-8080-exec-2] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:24.158 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:24.159 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:24.161 [http-nio-8080-exec-1] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:26.801 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:26.802 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:26.804 [http-nio-8080-exec-10] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:26.812 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:26.812 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:26.812 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:26.812 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:26.812 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:26.813 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:26.814 [http-nio-8080-exec-5] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:26.814 [http-nio-8080-exec-4] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:26.814 [http-nio-8080-exec-8] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 18:53:28.406 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 获取到的Token：Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAwMiwiaWF0IjoxNzc5OTY1NjAxLCJleHAiOjE3Nzk5NzI4MDF9.9e-1G4lxeBwAnNV_X_iLb98iD18hZBzN6gCTvmSryuw
+2026-05-28 18:53:28.407 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - JWT校验成功，用户ID：1002
+2026-05-28 18:53:28.432 [http-nio-8080-exec-6] INFO  com.longan.JWT.JwtTokenInterceptor - 清除ThreadLocal中的用户ID
+2026-05-28 19:17:00.109 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-28 19:17:00.110 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
